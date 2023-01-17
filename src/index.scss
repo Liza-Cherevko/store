@@ -52,6 +52,12 @@ width: 220px;
 border: 1px solid #F3F3F3;
 border-radius: 40px;
 padding: 20px 29px 34px 30px;
+transition:  box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+&:hover{
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.06);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
 h5{
  margin-bottom: 14px;
   font-weight: 400;
@@ -60,7 +66,7 @@ h5{
 .price{
 color: #BDBDBD;
 font-weight: 500;
-font-size: 11px;
+font-size: 11px; 
 line-height: 13px;
 
 }
@@ -86,4 +92,93 @@ padding: 5px;
 input{
   border: none;
 }
+}
+.favorite{
+  position: absolute;
+  cursor: pointer;
+
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 9;
+}
+.drawer{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 420px;
+  height: 100%;
+  right: 0;
+  background: #ffff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  h2{
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+margin: 0;
+  }
+}
+.items{
+  flex: 1;
+}
+.cartItem{
+  border: 1px solid #F3F3F3;
+border-radius: 20px;
+overflow: hidden;
+padding: 20px;
+  p,b{
+    font-size: 14;
+  }
+  .cartItemImg{
+    height: 70px;
+    width: 70px;
+    background-size: contain;
+    background-position: 0 10px ;
+    background-repeat: no-repeat;
+    // background-image: url(../public/img/sneakers/1.jpg);
+    margin-right: 20px;
+   
+  }
+}
+.remove-btn{
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.15s ease-in-out;
+&:hover{
+  opacity: 2;
+}
+}
+
+.cartTotalBlock{
+  ul{
+    li{
+      display: flex;
+      align-items: flex-end;
+      div{
+        flex: 1;
+        height: 1px;
+        border: 1px dashed #dfdfdf;
+        position: relative;
+        top: 18px;
+        margin: 0 7px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  button{
+    margin-top: 28px;
+    width: 325px;
+    height: 55px;
+    background: #9DD558;
+    border-radius: 18px;
+    border: none;
+    color: #FFFFFF;
+  }
+  
 }
